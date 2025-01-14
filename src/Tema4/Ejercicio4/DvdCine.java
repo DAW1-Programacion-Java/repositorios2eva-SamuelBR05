@@ -1,19 +1,20 @@
 package Tema4.Ejercicio4;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DvdCine {
     private String titulo;
     private String director;
     private String productora;
-    private String actoresPrincipales;
+    private ArrayList<String> actoresPrincipales = new ArrayList<>();
     private String genero;
     private String resumen;
     private int duracion;
 
 
-    public DvdCine(String titulo, String director, String productora, String actoresPrincipales, String genero,
+    public DvdCine(String titulo, String director, String productora, ArrayList<String> actoresPrincipales, String genero,
                    String resumen, int duracion) {
 
         this.titulo = titulo;
@@ -50,20 +51,12 @@ public class DvdCine {
         this.productora = productora;
     }
 
-    public String getActoresPrincipales() {
+    public ArrayList<String> getActoresPrincipales() {
         return actoresPrincipales;
     }
 
-    public void setActoresPrincipales(String actoresPrincipales) {
+    public void setActoresPrincipales(ArrayList<String> actoresPrincipales) {
         this.actoresPrincipales = actoresPrincipales;
-    }
-
-    public String getResumen() {
-        return resumen;
-    }
-
-    public void setResumen(String resumen) {
-        this.resumen = resumen;
     }
 
     public String getGenero() {
@@ -72,6 +65,14 @@ public class DvdCine {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getResumen() {
+        return resumen;
+    }
+
+    public void setResumen(String resumen) {
+        this.resumen = resumen;
     }
 
     public int getDuracion() {
@@ -83,10 +84,12 @@ public class DvdCine {
     }
 
     public boolean esThriller(){
+
         return this.genero.equalsIgnoreCase("Thriller");
     }
 
     public boolean mimsaProductora(DvdCine AnaTomate){
+
         return this.productora.equals(AnaTomate.getProductora());
     }
 
