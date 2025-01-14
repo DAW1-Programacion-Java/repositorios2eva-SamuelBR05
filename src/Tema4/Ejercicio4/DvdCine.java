@@ -10,11 +10,11 @@ public class DvdCine {
     private String actoresPrincipales;
     private String genero;
     private String resumen;
-    private int [] duracion;
+    private int duracion;
 
 
     public DvdCine(String titulo, String director, String productora, String actoresPrincipales, String genero,
-                   String resumen, int [] duracion) {
+                   String resumen, int duracion) {
 
         this.titulo = titulo;
         this.director = director;
@@ -42,14 +42,6 @@ public class DvdCine {
         this.director = director;
     }
 
-    public String getActoresPrincipales() {
-        return actoresPrincipales;
-    }
-
-    public void setActoresPrincipales(String actoresPrincipales) {
-        this.actoresPrincipales = actoresPrincipales;
-    }
-
     public String getProductora() {
         return productora;
     }
@@ -58,12 +50,12 @@ public class DvdCine {
         this.productora = productora;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getActoresPrincipales() {
+        return actoresPrincipales;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setActoresPrincipales(String actoresPrincipales) {
+        this.actoresPrincipales = actoresPrincipales;
     }
 
     public String getResumen() {
@@ -74,11 +66,19 @@ public class DvdCine {
         this.resumen = resumen;
     }
 
-    public int[] getDuracion() {
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int[] duracion) {
+    public void setDuracion(int duracion) {
         this.duracion = duracion;
     }
 
@@ -99,7 +99,8 @@ public class DvdCine {
                 ", actoresPrincipales='" + actoresPrincipales + '\'' +
                 ", genero='" + genero + '\'' +
                 ", resumen='" + resumen + '\'' +
-                ", duracion=" + Arrays.toString(duracion) +
+                ", duracion=" + duracion +
                 '}';
     }
 }
+
